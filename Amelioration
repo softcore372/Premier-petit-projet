@@ -1,0 +1,51 @@
+print("Bienvenue dans le chat bot ia de Softcore AI")
+
+# demander un mot de passe pour acceder au chat bot
+mot_de_passe = ""
+while mot_de_passe != "ia":
+    mot_de_passe = input("Quel est le mot de passe")
+
+print("Bienvenue")
+
+# Enregistrer le prenom et l'age de l'utilisateur
+prenom = input("Quel est ton prenom")
+age = int(input("Quel age a tu"))
+
+if age < 18 :
+    statut = "mineur"
+
+elif age == 14:
+    statut = "tu est cool"
+          
+else:
+    statut = "majeur"
+
+print(f"Salut{prenom},tu as {age} ans, tu est {statut}.")
+
+
+# Sujet de discussion proposé a l'utilisateur
+sujet = {
+    "ia": "c cool de fou",
+    "argent": "Trés utile",
+    "Mclaren": "incroyable et cool",
+    "santé": "important oui"
+}
+
+# Fonction de la discussion
+print("De quoi veut tu donc parler",prenom,"tape stop pour quitter c'est toi qui decide")
+def discuter():
+    while True:
+        sujets = input("De quoi veut tu parler, tape [stop] pour quitter")
+        
+        if sujets == "stop":
+            print("Au revoir :)")
+            break
+
+        elif sujets in sujet:
+            print(sujet[sujets])
+
+        else:
+            print("je ne dispose pas d'information sur ce sujet je ne peux pas en discuter")
+
+# Lancer la discussion
+discuter()
